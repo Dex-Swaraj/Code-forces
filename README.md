@@ -43,3 +43,11 @@ This repository contains Codeforces solutions in C++. Each entry below includes 
   1. Sort both strings.
   2. Compare the sorted results.
   3. If they match, the answer is YES; otherwise NO.
+
+### 6. notelock
+- File: `notelock.cpp`
+- Short intro: Count the minimum number of protected positions by grouping nearby locked notes when repeated marks are close.
+- How it solves:
+  1. Read the string of note markers and the required gap `k`.
+  2. Track the most recent marked position and only increment when the current mark is separated by at least `k` from the previous one.
+  3. Print the total count of such protected positions.
