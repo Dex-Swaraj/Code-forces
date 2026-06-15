@@ -1,123 +1,192 @@
 # Codeforces Solutions
 
-This repository contains my C++ solutions to various Codeforces problems. Each solution is written with competitive programming constraints in mind and follows an efficient approach.
+This repository contains my C++ solutions to various Codeforces problems. The solutions focus on competitive programming techniques such as sorting, greedy algorithms, two pointers, simulation, and string manipulation.
 
-## Problem List
+## Repository Structure
 
-### 1. 230A - Dragons
-- File: `dragons.cpp`
-- Difficulty: Easy
-- Description:
-  Kirito starts with a certain strength and must defeat all dragons. Each dragon requires a minimum strength to defeat and grants additional strength after being defeated.
-- Approach:
-  1. Store dragons as `(strength, bonus)` pairs.
-  2. Sort dragons by required strength.
-  3. Defeat dragons in order, increasing strength after each victory.
-  4. If any dragon cannot be defeated, print `NO`; otherwise `YES`.
+```text
+CODEF/
+├── discounts.cpp
+├── dragons.cpp
+├── favorite_Sequence.cpp
+├── journey.cpp
+├── notelock.cpp
+├── seating_inBus.cpp
+├── String_rotationGame.cpp
+├── trippi_Troppi.cpp
+├── your_Nmae.cpp
+└── README.md
+```
 
----
+## Problems
 
-### 2. 1462A - Favorite Sequence
-- File: `favorite_Sequence.cpp`
-- Difficulty: Easy
-- Description:
-  Construct a new sequence by alternately taking elements from the beginning and end of the array.
-- Approach:
-  1. Use two pointers (`left` and `right`).
-  2. Print the left element, then the right element.
-  3. Move pointers inward until all elements are processed.
+### 230A - Dragons
 
----
+**File:** `dragons.cpp`
 
-### 3. 2000B - Seating in Bus
-- File: `seating_inBus.cpp`
-- Difficulty: Easy
-- Description:
-  Determine whether passengers can be seated according to the given adjacency constraints.
-- Approach:
-  1. Track occupied seats.
-  2. For every arriving passenger, verify at least one neighboring seat is occupied when required.
-  3. Output `YES` if all conditions are satisfied; otherwise `NO`.
+**Problem:** Determine whether a hero can defeat all dragons and gain enough strength after each battle.
+
+**Approach:**
+
+1. Store dragons as `(strength, bonus)` pairs.
+2. Sort dragons by required strength.
+3. Defeat dragons in order and increase the hero's strength.
+4. Print `YES` if all dragons are defeated, otherwise `NO`.
 
 ---
 
-### 4. String Rotation Game
-- File: `String_rotationGame.cpp`
-- Difficulty: Easy
-- Description:
-  Analyze different rotations of a string and determine the best possible result according to the problem rules.
-- Approach:
-  1. Generate possible rotations.
-  2. Evaluate each rotation.
-  3. Return the optimal answer.
+### 1462A - Favorite Sequence
+
+**File:** `favorite_Sequence.cpp`
+
+**Problem:** Construct a sequence by alternately selecting elements from the beginning and end.
+
+**Approach:**
+
+1. Use two pointers (`left` and `right`).
+2. Output elements alternately from both ends.
+3. Continue until all elements are processed.
 
 ---
 
-### 5. Your Name
-- File: `your_Nmae.cpp`
-- Difficulty: Easy
-- Description:
-  Process the given strings and determine whether the required condition holds.
-- Approach:
-  1. Read the input strings.
-  2. Apply the required comparison logic.
-  3. Print the corresponding result.
+### 2000B - Seating in Bus
+
+**File:** `seating_inBus.cpp`
+
+**Problem:** Check whether the seating arrangement satisfies the required adjacency rules.
+
+**Approach:**
+
+1. Track occupied seats.
+2. Verify neighbor conditions for each passenger.
+3. Print `YES` if valid, otherwise `NO`.
 
 ---
 
-### 6. Notelock
-- File: `notelock.cpp`
-- Difficulty: Easy
-- Description:
-  Count the minimum number of protected positions while maintaining the required spacing constraint.
-- Approach:
-  1. Traverse the note sequence.
-  2. Track the last protected position.
-  3. Create a new protected position only when the gap condition is satisfied.
-  4. Output the total count.
+### Journey
+
+**File:** `journey.cpp`
+
+**Problem:** Compute the optimal result based on the journey constraints.
+
+**Approach:**
+
+1. Read the journey parameters.
+2. Apply the required greedy or mathematical logic.
+3. Output the final answer.
 
 ---
 
-### 7. Discounts
-- File: `discounts.cpp`
-- Difficulty: Easy
-- Description:
-  Calculate the final cost after applying the discount rules specified in the problem.
-- Approach:
-  1. Read item prices and discount information.
-  2. Apply the required discount strategy.
-  3. Output the resulting value.
+### Notelock
+
+**File:** `notelock.cpp`
+
+**Problem:** Count protected note positions while maintaining a minimum distance constraint.
+
+**Approach:**
+
+1. Traverse the note sequence.
+2. Track the last protected position.
+3. Count only valid protected positions.
+4. Output the total count.
 
 ---
 
-### 8. Journey
-- File: `journey.cpp`
-- Difficulty: Easy
-- Description:
-  Determine the optimal outcome for the journey based on the given constraints.
-- Approach:
-  1. Process the input parameters.
-  2. Apply the mathematical/greedy logic required by the problem.
-  3. Print the final answer.
+### Discounts
+
+**File:** `discounts.cpp`
+
+**Problem:** Calculate the final value after applying the discount rules.
+
+**Approach:**
+
+1. Read product prices and discount information.
+2. Apply the required discount strategy.
+3. Output the resulting value.
 
 ---
 
-### 9. Trippi Troppi
-- File: `trippi_Troppi.cpp`
-- Difficulty: Easy
-- Description:
-  Convert the ancient country name into its modern abbreviation.
-- Approach:
-  1. Read the three words forming the ancient name.
-  2. Extract the first character from each word.
-  3. Concatenate them and print the resulting abbreviation.
+### String Rotation Game
+
+**File:** `String_rotationGame.cpp`
+
+**Problem:** Analyze string rotations and determine the best possible result.
+
+**Approach:**
+
+1. Generate possible rotations.
+2. Evaluate each rotation.
+3. Return the optimal answer.
 
 ---
 
-## How to Run
+### Trippi Troppi
+
+**File:** `trippi_Troppi.cpp`
+
+**Problem:** Create the modern country abbreviation from its ancient three-word name.
+
+**Approach:**
+
+1. Read three strings.
+2. Extract the first character from each.
+3. Concatenate and print the abbreviation.
+
+---
+
+### Your Name
+
+**File:** `your_Nmae.cpp`
+
+**Problem:** Determine whether the required string condition is satisfied.
+
+**Approach:**
+
+1. Read input strings.
+2. Apply the required comparison logic.
+3. Print the result.
+
+---
+
+## Compilation
 
 Compile any solution using:
 
 ```bash
 g++ filename.cpp -o output
-./output
+```
+
+### Examples
+
+```bash
+g++ dragons.cpp -o dragons
+./dragons
+```
+
+```bash
+g++ favorite_Sequence.cpp -o favorite
+./favorite
+```
+
+```bash
+g++ seating_inBus.cpp -o seating
+./seating
+```
+
+## Topics Covered
+
+* Sorting
+* Greedy Algorithms
+* Two Pointers
+* Simulation
+* String Manipulation
+* Arrays
+* Implementation
+
+## Language
+
+* C++17
+
+## Platform
+
+* Codeforces
