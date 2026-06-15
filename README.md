@@ -1,53 +1,123 @@
-# Codeforces Problems
+# Codeforces Solutions
 
-This repository contains Codeforces solutions in C++. Each entry below includes the problem name, a short intro, and a simple 2-3 step description of how the solution works.
+This repository contains my C++ solutions to various Codeforces problems. Each solution is written with competitive programming constraints in mind and follows an efficient approach.
 
 ## Problem List
 
-### 1. 230_A Dragons
+### 1. 230A - Dragons
 - File: `dragons.cpp`
-- Short intro: Determine whether a hero can defeat all dragons one by one using starting strength and rewards from each dragon.
-- How it solves:
-  1. Sort dragons by required power.
-  2. For each dragon, check whether the hero's current strength is enough.
-  3. If yes, add the dragon's reward to strength; otherwise stop and return NO.
+- Difficulty: Easy
+- Description:
+  Kirito starts with a certain strength and must defeat all dragons. Each dragon requires a minimum strength to defeat and grants additional strength after being defeated.
+- Approach:
+  1. Store dragons as `(strength, bonus)` pairs.
+  2. Sort dragons by required strength.
+  3. Defeat dragons in order, increasing strength after each victory.
+  4. If any dragon cannot be defeated, print `NO`; otherwise `YES`.
 
-### 2. 1462_A Favorite Sequence
+---
+
+### 2. 1462A - Favorite Sequence
 - File: `favorite_Sequence.cpp`
-- Short intro: Build a new sequence by taking values alternately from the start and end of the input array.
-- How it solves:
-  1. Use two pointers at the left and right ends of the array.
-  2. Add the left element, then the right element, and move the pointers inward.
-  3. Repeat until all elements are placed in the new sequence.
+- Difficulty: Easy
+- Description:
+  Construct a new sequence by alternately taking elements from the beginning and end of the array.
+- Approach:
+  1. Use two pointers (`left` and `right`).
+  2. Print the left element, then the right element.
+  3. Move pointers inward until all elements are processed.
 
-### 3. 2000_B Seating in Bus
+---
+
+### 3. 2000B - Seating in Bus
 - File: `seating_inBus.cpp`
-- Short intro: Verify whether a given sequence satisfies specific neighbor-based adjacency rules.
-- How it solves:
-  1. Track which values have already appeared.
-  2. For each element, check its required neighbor conditions.
-  3. If the sequence breaks a rule, return NO; otherwise return YES.
+- Difficulty: Easy
+- Description:
+  Determine whether passengers can be seated according to the given adjacency constraints.
+- Approach:
+  1. Track occupied seats.
+  2. For every arriving passenger, verify at least one neighboring seat is occupied when required.
+  3. Output `YES` if all conditions are satisfied; otherwise `NO`.
 
-### 4. 2192_A String Rotation Game
+---
+
+### 4. String Rotation Game
 - File: `String_rotationGame.cpp`
-- Short intro: Find the rotation of a string that gives the maximum number of alternating characters.
-- How it solves:
-  1. Generate each rotation of the string.
-  2. Count adjacent changes in each rotated string.
-  3. Return the maximum alternation count found.
+- Difficulty: Easy
+- Description:
+  Analyze different rotations of a string and determine the best possible result according to the problem rules.
+- Approach:
+  1. Generate possible rotations.
+  2. Evaluate each rotation.
+  3. Return the optimal answer.
 
-### 5. 2167_B Your Name
+---
+
+### 5. Your Name
 - File: `your_Nmae.cpp`
-- Short intro: Check whether one string can be rearranged to form another string of the same length.
-- How it solves:
-  1. Sort both strings.
-  2. Compare the sorted results.
-  3. If they match, the answer is YES; otherwise NO.
+- Difficulty: Easy
+- Description:
+  Process the given strings and determine whether the required condition holds.
+- Approach:
+  1. Read the input strings.
+  2. Apply the required comparison logic.
+  3. Print the corresponding result.
 
-### 6. notelock
+---
+
+### 6. Notelock
 - File: `notelock.cpp`
-- Short intro: Count the minimum number of protected positions by grouping nearby locked notes when repeated marks are close.
-- How it solves:
-  1. Read the string of note markers and the required gap `k`.
-  2. Track the most recent marked position and only increment when the current mark is separated by at least `k` from the previous one.
-  3. Print the total count of such protected positions.
+- Difficulty: Easy
+- Description:
+  Count the minimum number of protected positions while maintaining the required spacing constraint.
+- Approach:
+  1. Traverse the note sequence.
+  2. Track the last protected position.
+  3. Create a new protected position only when the gap condition is satisfied.
+  4. Output the total count.
+
+---
+
+### 7. Discounts
+- File: `discounts.cpp`
+- Difficulty: Easy
+- Description:
+  Calculate the final cost after applying the discount rules specified in the problem.
+- Approach:
+  1. Read item prices and discount information.
+  2. Apply the required discount strategy.
+  3. Output the resulting value.
+
+---
+
+### 8. Journey
+- File: `journey.cpp`
+- Difficulty: Easy
+- Description:
+  Determine the optimal outcome for the journey based on the given constraints.
+- Approach:
+  1. Process the input parameters.
+  2. Apply the mathematical/greedy logic required by the problem.
+  3. Print the final answer.
+
+---
+
+### 9. Trippi Troppi
+- File: `trippi_Troppi.cpp`
+- Difficulty: Easy
+- Description:
+  Convert the ancient country name into its modern abbreviation.
+- Approach:
+  1. Read the three words forming the ancient name.
+  2. Extract the first character from each word.
+  3. Concatenate them and print the resulting abbreviation.
+
+---
+
+## How to Run
+
+Compile any solution using:
+
+```bash
+g++ filename.cpp -o output
+./output
