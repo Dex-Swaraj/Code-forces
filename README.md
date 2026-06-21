@@ -1,11 +1,12 @@
 # Codeforces Solutions
 
-This repository contains my C++ solutions to various Codeforces problems. The solutions focus on competitive programming techniques such as sorting, greedy algorithms, two pointers, simulation, and string manipulation.
+This repository contains my C++ solutions to various Codeforces problems. The solutions focus on competitive programming techniques such as sorting, greedy algorithms, two pointers, simulation, string manipulation, math, and implementation.
 
 ## Repository Structure
 
 ```text
 CODEF/
+├── ai_ProjectDevelopment.cpp
 ├── discounts.cpp
 ├── dragons.cpp
 ├── favorite_Sequence.cpp
@@ -20,7 +21,7 @@ CODEF/
 
 ## Problems
 
-### 230A - Dragons
+### Dragons
 
 **File:** `dragons.cpp`
 
@@ -35,7 +36,7 @@ CODEF/
 
 ---
 
-### 1462A - Favorite Sequence
+### Favorite Sequence
 
 **File:** `favorite_Sequence.cpp`
 
@@ -49,7 +50,7 @@ CODEF/
 
 ---
 
-### 2000B - Seating in Bus
+### Seating in Bus
 
 **File:** `seating_inBus.cpp`
 
@@ -148,6 +149,21 @@ CODEF/
 
 ---
 
+### AI Project Development
+
+**File:** `ai_ProjectDevelopment.cpp`
+
+**Problem:** Determine the minimum number of full hours required to complete the project when Maxim writes continuously and Nikita can either work normally or spend time setting up an AI agent that increases his coding speed.
+
+**Approach:**
+
+1. Calculate the completion time if Nikita starts coding immediately at speed `y`.
+2. Calculate the completion time if Nikita spends `z` hours setting up AI and then writes at speed `10 × y`.
+3. Handle the special case where Maxim alone finishes the project before AI setup is completed.
+4. Compare both strategies and output the minimum completion time.
+
+---
+
 ## Compilation
 
 Compile any solution using:
@@ -181,6 +197,7 @@ g++ seating_inBus.cpp -o seating
 * Simulation
 * String Manipulation
 * Arrays
+* Math
 * Implementation
 
 ## Language
